@@ -52,9 +52,9 @@ export default function Sign_Up() {
     console.log("done");
     createUserWithEmailAndPassword(auth, email, password)
       .then((res) => {
-        alert("register successfully")
+        // alert("register successfully")
         
-        navigate("/Home");
+        // navigate("/Home");
 
         setDoc(doc(db, "users", res.user.uid), {
           email: email,
@@ -67,10 +67,10 @@ export default function Sign_Up() {
         .catch((error) => {
           if (error.code === "auth/wrong-password") {
         //   toast.error("Please check the Password");
-        alert("Please check the Password")
+        // alert("Please check the Password")
         }
         if (error.code === "auth/user-not-found") {
-          alert("Please check the Email");
+          // alert("Please check the Email");
         }
         });
   };

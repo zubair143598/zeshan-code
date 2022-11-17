@@ -30,15 +30,15 @@ export default function Log_in(){
         const auth = getAuth();
         signInWithEmailAndPassword(auth, email, password)
           .then((res) => {
-            navigate("/home");
-            alert("log in successfully");
+            // navigate("/home");
+            // alert("log in successfully");
           })
           .catch((e) => {
             if (e.code === "auth/wrong-password") {
-              alert("please check the password");
+              // alert("please check the password");
             }
             if (e.code === "auth/user-not-found") {
-              alert("please check the email");
+              // alert("please check the email");
             }
           });
       };
@@ -46,15 +46,15 @@ export default function Log_in(){
         const auth = getAuth();
         sendPasswordResetEmail(auth, email)
           .then(() => {
-            alert("Password reset email sent!") 
+            // alert("Password reset email sent!") 
             // ..
           })
           .catch((e) => {
             if (e.code === "auth/wrong-password") {
-              alert("please check the password");
+              // alert("please check the password");
             }
             if (e.code === "auth/user-not-found") {
-              alert("please check the email");
+              // alert("please check the email");
             }
           });
       };
